@@ -15,7 +15,7 @@ namespace Todo.Data.Configurations
             builder.Property(x => x.Id).UseIdentityColumn();
             builder.Property(x => x.Title).IsRequired().HasMaxLength(150);
             builder.Property(x => x.IsDone).IsRequired();
-            builder.ToTable("Y");
+            builder.ToTable("Todos");
         }
     }
 }

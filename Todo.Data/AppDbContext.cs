@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using Todo.Core.Models;
 using Todo.Data.Configurations;
+using Todo.Data.Seeds;
 
 namespace Todo.Data
 {
@@ -20,6 +21,8 @@ namespace Todo.Data
         {
             modelBuilder.ApplyConfiguration(new UserConfiguration());
             modelBuilder.ApplyConfiguration(new TodosConfiguration());
+            modelBuilder.ApplyConfiguration(new TodosSeed(new int[] { 1, 2, 3 }));
+            modelBuilder.ApplyConfiguration(new UserSeed(new int[] { 1, 2, 3 }));
         }
     }
 }
